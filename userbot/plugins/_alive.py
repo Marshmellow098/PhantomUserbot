@@ -31,7 +31,7 @@ pm_caption += "**sᴜᴘᴘᴏʀᴛ - ɢʀᴏᴜᴘ =** [PhantomSupport](https:/
 pm_caption += f"**[❤️ Create your own PHANTOM USERBOT ❤️](https://dashboard.heroku.com/new?template=https://github.com/prothinkergang/Phantomuserbot)**"
 
 @borg.on(phantom_cmd(pattern=r"me"))
-async def amireallyalive(me):
+async def amireallyalive(alive):
     chat = await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id,file=ALIVE_PIC,caption=pm_caption)
