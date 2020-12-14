@@ -1,0 +1,30 @@
+
+
+
+name: Small Fix
+on: push
+jobs:
+  build:
+     run-on: ubuntu-latestubuntu-latest
+     steps:
+       - uses: action/checkout @v2
+       - name: Find nd Replace
+         uses: jacobtomlinson/gha-find-replace@master
+         with:
+           find:"@borg.on"
+           replace: "@bot.on"
+          - name: Create Pull Request
+            uses: stefanzweifel/git-auto-commit-action@v4
+             with:
+             commit_message: 'me new sir'
+             commit_options: '--no-verify'
+             repository: .
+             commit_user_name: mellow
+             commit_user_email: gboys6252@gmail.com
+             
+             
+            
+            
+  
+
+
